@@ -7,7 +7,7 @@
     - [x] 4. Course Goals
 
 - [ ] Section 2: Introduction to Jenkins
-    - [ ] 5. What is Jenkins (Part I)
+    - [x] 5. What is Jenkins (Part I)
     - [ ] 6. What is Jenkins (Part II)
     - [ ] 7. Jenkins Installation
     - [ ] 8. Demo: Jenkins Installation
