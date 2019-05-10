@@ -8,7 +8,7 @@
 
 - [ ] Section 2: Introduction to Jenkins
     - [x] 5. What is Jenkins (Part I)
-    - [ ] 6. What is Jenkins (Part II)
+    - [x] 6. What is Jenkins (Part II)
     - [ ] 7. Jenkins Installation
     - [ ] 8. Demo: Jenkins Installation
     - [ ] 9. Introduction to Docker
