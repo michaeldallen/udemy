@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.mathworks.com/mallen/udemy.git'
-    path: manifest
-    targetRevision: main
+    repoURL: 'git@github.com:michaeldallen/udemy.git'
+    path: Mastering-GitOps-with-Argo-CD/section03lesson09/manifest
+    targetRevision: master
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
