@@ -3,5 +3,8 @@
   "extends": [
     "config:recommended"
   ],
-    "dependencyDashboardAutoclose": true
+  "git-submodules": {
+    "enabled": true
+  },
+  "dependencyDashboardAutoclose": true
 }
