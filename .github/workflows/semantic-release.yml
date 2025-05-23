@@ -1,0 +1,35 @@
+name: semantic-release
+
+on:
+  workflow_dispatch:
+
+  # note: this will run twice if README.md is updated
+  push:
+    branches:
+      - main
+  workflow_run:
+    workflows: ["github ToC"]
+    types:
+      - completed
+
+jobs:
+  release:
+    name: Semantic Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install semantic-release
+        run: npm install --no-save semantic-release @semantic-release/git @semantic-release/changelog
+
+      - name: Run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release

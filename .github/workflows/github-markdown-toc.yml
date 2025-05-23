@@ -1,0 +1,29 @@
+name: github-markdown-toc
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['README.md']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Update Table of Contents
+        run: |
+          curl https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc -o gh-md-toc
+          chmod a+x gh-md-toc
+          ./gh-md-toc --insert --no-backup --hide-footer README.md
+          rm gh-md-toc
+      - name: self-commit our changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Auto update markdown TOC
