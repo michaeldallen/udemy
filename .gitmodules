@@ -16,6 +16,3 @@
 [submodule "Mastering-GitOps-with-Argo-CD"]
 	path = Mastering-GitOps-with-Argo-CD
 	url = git@github.com:michaeldallen/Mastering-GitOps-with-Argo-CD.git
-[submodule "The--Complete--Github--Actions--and--Workflows--Guide"]
-    path = "The--Complete--Github--Actions--and--Workflows--Guide"
-	url = git@github.com:michaeldallen/The--Complete--Github--Actions--and--Workflows--Guide.git
